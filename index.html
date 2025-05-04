@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cuidado al Adulto Mayor</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link rel="stylesheet" href="animaciones.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+</head>
+<body>
+
+  <!-- Navegación -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#inicio" class="logo">Mis Ángeles</a>
+      <div class="menu-icon" onclick="toggleNav()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Encabezado -->
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Centro de Adultos Mayor "Mis Ángeles"</h1>
+      <p>Con amor, respeto y profesionalismo</p>
+      <a href="#contacto" class="cta">Contáctanos</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Bienvenida -->
+    <section id="inicio" class="section">
+      <h2>Bienvenidos</h2>
+      <p>Ofrecemos atención cálida y de calidad para nuestros adultos mayores, fomentando su bienestar físico y emocional.</p>
+      <div class="cards">
+        <div class="card" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-user-nurse"></i>
+          <h3>Profesionales</h3>
+          <p>Especialistas en geriatría, enfermería y terapias ocupacionales.</p>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="400">
+          <i class="fas fa-heart"></i>
+          <h3>Atención Humana</h3>
+          <p>Cuidamos con cariño, empatía y vocación de servicio.</p>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="600">
+          <i class="fas fa-home"></i>
+          <h3>Ambiente Seguro</h3>
+          <p>Espacios adaptados y confortables, pensados para ellos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="section alt">
+      <h2>Servicios</h2>
+      <div class="servicios-grid">
+        <div data-aos="fade-right" data-aos-delay="200">
+          <h3>Cuidados Médicos</h3>
+          <p>Seguimiento de salud, medicación y consultas médicas periódicas.</p>
+          <img src="imagenes/historia1.jpg">
+        </div>
+        <div data-aos="fade-left" data-aos-delay="400">
+          <h3>Recreación</h3>
+          <p>Talleres de arte, música, juegos y salidas grupales.</p>
+          <img src="imagenes/numero2.jpg">
+        </div>
+        <div data-aos="fade-right" data-aos-delay="600">
+          <h3>Nutrición</h3>
+          <p>Planes de alimentación personalizados por nutricionistas.</p>
+          <img src="imagenes/numero3.jpg">
+        </div>
+        <div data-aos="fade-left" data-aos-delay="800">
+          <h3>Apoyo Emocional</h3>
+          <p>Contención psicológica y actividades intergeneracionales.</p>
+          <img src="imagenes/numero4.jpg">
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria" class="section">
+      <h2>Galería</h2>
+      <div class="galeria">
+        <img src="imagenes/numero5.jpg" class="img-galeria" alt="Imagen 1" />
+        <img src="imagenes/numero6.jpg" class="img-galeria" alt="Imagen 2" />
+        <img src="imagenes/portada.jpg" class="img-galeria" alt="Imagen 3" />
+        <img src="https://via.placeholder.com/300x200?text=Imagen+4" class="img-galeria extra-img" alt="Imagen 4" style="display:none;" />
+        <img src="https://via.placeholder.com/300x200?text=Imagen+5" class="img-galeria extra-img" alt="Imagen 5" style="display:none;" />
+      </div>
+      <button id="mostrar-mas" class="cta animado">Mostrar más</button>
+      <button id="mostrar-menos" class="cta animado" style="display: none;">Mostrar menos</button>
+
+      <!-- Lightbox -->
+      <div id="lightbox">
+        <img src="" alt="Imagen ampliada" />
+      </div>
+    </section>
+
+    <!-- Equipo -->
+    <section id="equipo" class="section">
+      <h2>Nuestro Equipo</h2>
+      <p>Un grupo humano comprometido con la dignidad y calidad de vida del adulto mayor.</p>
+      <img src="https://via.placeholder.com/900x350?text=Nuestro+Equipo" alt="Equipo Profesional" />
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="section alt">
+      <h2>Testimonios</h2>
+      <div class="testimonios">
+        <blockquote data-aos="fade-up" data-aos-delay="300">
+          "Gracias al equipo por su dedicación y cariño. Mi madre está feliz y cuidada."
+          <footer>- Laura G.</footer>
+        </blockquote>
+        <blockquote data-aos="fade-up" data-aos-delay="600">
+          "Un lugar lleno de amor y respeto. Recomiendo sus servicios."
+          <footer>- Carlos M.</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section">
+      <h2>Contacto</h2>
+      <form id="formulario-contacto">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Botón WhatsApp -->
+  <a href="https://wa.me/1234567890" class="whatsapp-button" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Cuidado al Adulto Mayor. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    document.getElementById("formulario-contacto").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("Gracias por contactarnos. Pronto responderemos a su mensaje.");
+      this.reset();
+    });
+
+    function toggleNav() {
+      const nav = document.getElementById('nav-links');
+      nav.classList.toggle('open');
+    }
+
+    // Mostrar más/menos imágenes
+    const btnMas = document.getElementById("mostrar-mas");
+    const btnMenos = document.getElementById("mostrar-menos");
+    const extras = document.querySelectorAll('.extra-img');
+
+    btnMas?.addEventListener("click", () => {
+      extras.forEach(img => img.style.display = 'block');
+      btnMas.style.display = 'none';
+      btnMenos.style.display = 'inline-block';
+    });
+
+    btnMenos?.addEventListener("click", () => {
+      extras.forEach(img => img.style.display = 'none');
+      btnMas.style.display = 'inline-block';
+      btnMenos.style.display = 'none';
+    });
+
+    // Lightbox
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector("img");
+
+    document.querySelectorAll(".img-galeria").forEach(image => {
+      image.addEventListener("click", () => {
+        lightboxImg.src = image.src;
+        lightbox.style.display = "flex";
+      });
+    });
+
+    lightbox.addEventListener("click", () => {
+      lightbox.style.display = "none";
+    });
+  </script>
+</body>
+</html>
