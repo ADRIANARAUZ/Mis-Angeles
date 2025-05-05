@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cuidado al Adulto Mayor</title>
+  <title>Centro Mis Angeles</title>
   <link rel="stylesheet" href="estilos.css" />
   <link rel="stylesheet" href="animaciones.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -32,8 +32,8 @@
   <header class="hero">
     <div class="overlay"></div>
     <div class="hero-content">
-      <h1>Centro de Adultos Mayor "Mis Ángeles"</h1>
-      <p>Con amor, respeto y profesionalismo</p>
+      <h1></h1>
+      <p></p>
       <a href="#contacto" class="cta">Contáctanos</a>
     </div>
   </header>
@@ -59,6 +59,7 @@
           <i class="fas fa-home"></i>
           <h3>Ambiente Seguro</h3>
           <p>Espacios adaptados y confortables, pensados para ellos.</p>
+
         </div>
       </div>
     </section>
@@ -70,22 +71,25 @@
         <div data-aos="fade-right" data-aos-delay="200">
           <h3>Cuidados Médicos</h3>
           <p>Seguimiento de salud, medicación y consultas médicas periódicas.</p>
-          <img src="imagenes/historia1.jpg">
+          <img src="imagenes/cuidados.jpg">
         </div>
         <div data-aos="fade-left" data-aos-delay="400">
           <h3>Recreación</h3>
           <p>Talleres de arte, música, juegos y salidas grupales.</p>
-          <img src="imagenes/numero2.jpg">
+          <img src="imagenes/Recreacion.jpg">
         </div>
         <div data-aos="fade-right" data-aos-delay="600">
           <h3>Nutrición</h3>
           <p>Planes de alimentación personalizados por nutricionistas.</p>
-          <img src="imagenes/numero3.jpg">
+          <img src="imagenes/Nutricion.jpg">
         </div>
         <div data-aos="fade-left" data-aos-delay="800">
           <h3>Apoyo Emocional</h3>
           <p>Contención psicológica y actividades intergeneracionales.</p>
-          <img src="imagenes/numero4.jpg">
+          <img src="imagenes/Apoyo Emocional.jpg">
+          
+        </div>
+      
         </div>
       </div>
     </section>
@@ -97,7 +101,7 @@
         <img src="imagenes/numero5.jpg" class="img-galeria" alt="Imagen 1" />
         <img src="imagenes/numero6.jpg" class="img-galeria" alt="Imagen 2" />
         <img src="imagenes/portada.jpg" class="img-galeria" alt="Imagen 3" />
-        <img src="https://via.placeholder.com/300x200?text=Imagen+4" class="img-galeria extra-img" alt="Imagen 4" style="display:none;" />
+        <img src="imagenes/Imagen 7.jpg" class="img-galeria extra-img" alt="Imagen 4" style="display:none;" />
         <img src="https://via.placeholder.com/300x200?text=Imagen+5" class="img-galeria extra-img" alt="Imagen 5" style="display:none;" />
       </div>
       <button id="mostrar-mas" class="cta animado">Mostrar más</button>
@@ -110,11 +114,17 @@
     </section>
 
     <!-- Equipo -->
+    
     <section id="equipo" class="section">
+      <div class="img-equipo">
       <h2>Nuestro Equipo</h2>
-      <p>Un grupo humano comprometido con la dignidad y calidad de vida del adulto mayor.</p>
-      <img src="https://via.placeholder.com/900x350?text=Nuestro+Equipo" alt="Equipo Profesional" />
+      <p>Un grupo humanos comprometido con la dignidad y calidad de vida del adulto mayor.</p>
+      <img src="imagenes/Equipo Profesional.jpg" alt="Nuestro equipo" class="equipo-img" onclick="abrirLightbox(this.src)">
+
+      </div>
     </section>
+
+
 
     <!-- Testimonios -->
     <section id="testimonios" class="section alt">
@@ -191,6 +201,7 @@
       btnMas.style.display = 'inline-block';
       btnMenos.style.display = 'none';
     });
+  
 
     // Lightbox
     const lightbox = document.getElementById("lightbox");
@@ -201,11 +212,31 @@
         lightboxImg.src = image.src;
         lightbox.style.display = "flex";
       });
-    });
-
+    });  
+    
     lightbox.addEventListener("click", () => {
       lightbox.style.display = "none";
     });
+
+  
+
   </script>
+</script>
+
+
+<script>
+  function abrirLightbox(src) {
+    const lightbox = document.getElementById('lightbox');
+    const img = lightbox.querySelector('img');
+    img.src = src;
+    lightbox.style.display = 'flex';
+  }
+
+  function cerrarLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.display = 'none';
+  }
+</script>
+
 </body>
 </html>
