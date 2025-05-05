@@ -372,6 +372,7 @@ blockquote {
   animation: fadeInUp 1s ease forwards;
   opacity: 0;
   justify-content: center;
+  font-size: auto;
 }
 
 .equipo  {
